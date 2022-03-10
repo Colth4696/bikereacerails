@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<div class='contest'>
+<div class='row'>
+<h1>Enter <%= link_to 'Here', new_slogan_path %> For Your Chance To Have Your Slogan Chosen For</h1><br>
+<h1>The 2020 Dicennial Boulder Bike Race!</h1>
+</div>
+</div>
+
+
+  <tbody>
+    <% @slogans.each do |slogan| %>
+      <tr>
+        <td><%= slogan.first_name %></td>
+        <td><%= slogan.last_name %></td>
+        <td><%= slogan.email %></td>
+        <td><%= slogan.slogan %></td>
+       # <td><%= link_to 'Show', slogan %></td>
+       # <td><%= link_to 'Edit', edit_slogan_path(slogan) %></td>
+       # <td><%= link_to 'Destroy', slogan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+#<%= link_to 'New Slogan', new_slogan_path %>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BoulderBike</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBxBnLuUfUKqSxV502zf-e4Op_o1rsAAoI' %>
+
+<link href="application.css" rel="stylesheet" >
+
+<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Aclonica" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+
+<title>BBR</title>
+
+  </head>
+
+  <body>
+
+<div id='main_wrap'>
+<div class='row'>
+<header id='nav_bar'>
+    <nav>
+        <ul>
+        <li><%= link_to 'Home', slogans_url %></li>
+        <li><%= link_to 'Racers', racers_url %></li>
+        <li><%= link_to 'Places', places_url %></li>
+        <li><%= link_to 'Photos', photos_url %></li>
+        <li><%= link_to 'Contest', slogans_url %></li>
+        </ul>
+    </nav>
+</header>
+ </div>
+
+<div class='row'>
+<div class='col-9'>
+<div id='slogan'>
+  <h1>Your Slogan Here</h1>
+  <%= link_to "Enter Now", new_slogan_path %>
+</div>
+</div>
+
+
+<div class='col-3'>
+<div id='logo'>
+    <%= image_tag("flatiron.png", :alt => "Irons") %>
+</div>
+
+
+<div id='banner_top'>
+    <h1>Boudler</h1>
+</div>
+
+<div id='banner_bttm'>
+    <h1>Bike Race</h1>
+    <h1>2020</h1>
+</div>
+</div>
+</div>
+
+<div class='row'>
+<div id="countdown">
+  <h2 id="demo"></h2>
+  <script>
+  var countDownDate = new Date("April 1, 2020 07:00:00").getTime();
+  var x = setInterval(function() {
+
+  var now = new Date().getTime();
+
+  var distance = countDownDate - now;
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+  }, 1000);
+  </script>
+</div>
+</div>
+
+<div class='row'>
+    <%= yield %>
+</div>
+
+<div class='row'>
+<div id= 'footer'>
+  <footer>
+    <ul>
+    <li><a href="#">Twitter</a></li>
+    <li><a href="#">Facebook</a></li>
+    <li><a href="#">Instagram</a></li>
+    <li><a href="#">Flickr</a></li>
+    <li><a href="#">GoogleMaps</a></li>
+    </ul>
+    </footer>
+</div>
+</div>
+</div>
+  </body>
+</html>

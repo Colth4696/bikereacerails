@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Photos</h1>
+<div id='photos' class='layer'></div>
+<script>
+var current_page=1;
+fetch_data(current_page)
+</script>
+
+<div id='buttons'>
+<button onclick="next()">Next</button>
+<button onclick="back()">Previous</button>
+</div>
+
+# <%= link_to 'New Photo', new_photo_path %>

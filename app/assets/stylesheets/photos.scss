@@ -1,0 +1,18 @@
+// Place all the styles related to the Photos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#photos
+{
+    display: grid;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    grid-gap: 2px;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+.img
+{
+    min-height: 100px;
+}

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: Joe
+  last_name: Smith
+  email: joesmith@gmail.com
+  slogan: test1
+
+two:
+  first_name: Jane  
+  last_name: Smith
+  email: janesmith@gmail.com
+  slogan: test2

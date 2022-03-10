@@ -1,0 +1,144 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ body
+ {
+     margin: 0px;
+ }
+
+ #main_wrap
+ {
+     background-image: url("background.jpg");
+     background-repeat: no-repeat;
+     background-position: top right;
+     background-attachment: fixed;
+}
+ 
+ #nav_bar, ul 
+ {
+     list-style-type: none;
+     overflow: hidden;
+     background-color: #333;
+ }
+   
+ #nav_bar, li 
+ {
+     display: inline;
+     font-size: 30px;
+ }
+   
+ #nav_bar, li a 
+ {
+     font-family: 'Cinzel', serif;
+     color: white;
+     text-align: left;
+     word-spacing: 1rem;
+     justify-content: space-between;
+     text-decoration: none;
+ }
+   
+  li a:hover 
+ {
+     background-color: rgb(17, 17, 17);
+ }
+ 
+ #banner_top, #banner_bttm
+ {
+     font-family: 'Cinzel', serif;
+     text-align: right;
+     font-size: 20px;
+     color: whitesmoke;
+     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+     padding: 30px;
+     position: relative;
+     right: 75px;
+     bottom: 30px;
+     
+ }
+ 
+ #logo
+ {
+     text-align: right;
+     height: 45px;
+     
+ }
+ 
+ #slogan
+ {
+     font-family: 'Cinzel', serif;
+     background-color: rgba(0, 0, 0, 0.5);
+     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+     color: white;
+     padding: 20px;
+     font-size: 30px;
+     text-align: center;
+ }
+ 
+ #sponsors
+ {
+     float: left;
+     position: relative;
+     justify-content: contain;
+     height: 35px;
+     width: 35px;
+ }
+ 
+ #countdown
+ {
+    font-family: 'Cinzel', serif;
+     text-align: center;
+     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+     font-size: 60px;
+     color: white;
+ }
+ 
+ #footer
+ {
+     text-align: center;
+     word-spacing: 1rem;
+ }
+
+ #googlemap
+ {
+     position: absolute;
+     float: right;
+ }
+
+ .field
+ {
+     text-align: center;
+     position: relative;
+     padding: 5px;
+     font-family: 'Cinzel', serif;
+     font-size: 30px;
+     color: white;
+     background-color: rgba(0, 0, 0, 0.5);
+     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+ }
+
+ .wrapper {
+    display: grid;
+    grid-column: 300px, 300px, 300px;
+    grid-gap: 10px;
+}
+
+.row{
+    display: grid;
+}
+
+.racer_box {
+    height: 300px;
+    position: relative;
+}

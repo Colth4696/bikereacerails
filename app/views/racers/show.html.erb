@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>First name:</strong>
+  <%= @racer.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @racer.last_name %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @racer.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @racer.state %>
+</p>
+</div>
+
+<% if @racer.avatar.attached? %>
+<div class='selfie'>
+  <%= image_tag @racer.avatar %>
+</div>
+<%end%>
+
+<%= link_to 'Edit', edit_racer_path(@racer) %> |
+<%= link_to 'Back', racers_path %>
